@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-xinerama --bg-scale '/home/jluna/Imágenes/WallpaperFusion-new-york-panorama-3840x1080.jpg' 

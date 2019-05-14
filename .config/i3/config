@@ -199,3 +199,4 @@ assign [class="Spotify"] $workspace5
 assign [class="spotify"] $workspace5
 
 exec ~/.screenlayout/worklayout.sh
+exec_always nitrogen --restore

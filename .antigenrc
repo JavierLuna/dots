@@ -3,6 +3,7 @@ antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle git-extras
+antigen bundle dotenv
 antigen bundle extract
 
 antigen bundle zsh-users/zsh-completions

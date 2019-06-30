@@ -10,7 +10,7 @@ set shiftwidth=4
 set encoding=utf-8
 set nu
 set clipboard=unnamedplus
-
+set noswapfile
 
 
 " Python file completion

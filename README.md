@@ -1,20 +1,18 @@
 # dots
 Collection of my own dot config files
 
-## Useful commands
+## Branches
 
-### Set terminal theme:
+There's a branch for each OS I use where its .config files are located.
 
-List:
-`dconf dump /org/gnome/terminal/legacy/profiles:/ | grep -e "\[\:\|visible-name"`
+At the moment, those are:
+```
+ubuntu
+```
 
-Export:
-`dconf dump /org/gnome/terminal/legacy/profiles:/:xx-xx-xx-xx/ > sample.dconf`
+## Ubuntu
 
-Import:
-
-`dconf load /org/gnome/terminal/legacy/profiles:/:xx-xx-xx-xx/ < sample.dconf`
-
+The main purpose of all configurations found here is my new found love towards i3, but that guy needs a lot of configuration adjusting.
 
 ### Fonts
 

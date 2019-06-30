@@ -1,5 +1,6 @@
 rofi.lines: 3
 rofi.width: 100
+rofi.height: 100
 rofi.padding: 450
 rofi.color-enabled: true
 rofi.color-window: argb:cc2f343f, argb:cc2f343f, argb:cc2f343f

@@ -7,4 +7,6 @@ alias v="vim"
 source $HOME/.zsh/antigen.zsh
 antigen init ~/.antigenrc
 
+export POSSIBLE_ENV_NAMES=( "env" )
+
 neofetch

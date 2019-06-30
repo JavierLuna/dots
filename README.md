@@ -8,11 +8,16 @@ There's a branch for each OS I use where its .config files are located.
 At the moment, those are:
 ```
 ubuntu
+void
 ```
 
 ## Ubuntu
 
-The main purpose of all configurations found here is my new found love towards i3, but that guy needs a lot of configuration adjusting.
+I use Ubuntu mainly for my work laptop. In addition, I think Ubuntu is better for a professional workstation as it is more stable than others (for example my new fav `void`).
+
+## Void
+
+For my main and personal workstation I'm currently using Void Linux. Void linux is a minimal distro made from the ground up, and I love it!
 
 ### Fonts
 

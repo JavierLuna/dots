@@ -56,6 +56,9 @@ Plugin 'vim-syntastic/syntastic'
 " Autocompletion
 Plugin 'Valloric/YouCompleteMe'
 
+" Docker syntax
+Plugin 'ekalinin/Dockerfile.vim'
+
 " Fugitive
 Plugin 'tpope/vim-fugitive'
 

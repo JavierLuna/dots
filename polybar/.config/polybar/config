@@ -1,0 +1,305 @@
+[colors]
+;background = ${xrdb:color0:#222}
+transparent = #00000000
+amber = #fdbe0f
+white = #fff
+font-colour = #2e3334
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground =#2e3334
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/left]
+monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 3% 
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background-alt} 
+foreground = ${colors.font-colour}
+
+line-size = 4
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+;font-0 = fixed:pixelsize=10;1
+;font-0 = menlo:fontformat=truetype:size=8:antialias=true;2
+font-0 = pango:System San Francisco Display:size=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=10;0
+font-4 = Font Awesome 5 Free Solid:pixelsize=10;0
+font-5 = Font Awesome 5 Brands:pixelsize=10;0
+
+
+modules-left = i3
+modules-center = title 
+modules-right = pulseaudio cpu wlan date 
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/right]
+monitor = ${env:MONITOR:HDMI-2}
+width = 100%
+height = 3% 
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background-alt} 
+foreground = ${colors.font-colour}
+
+line-size = 4
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+;font-0 = fixed:pixelsize=10;1
+;font-0 = menlo:fontformat=truetype:size=8:antialias=true;2
+font-0 = pango:System San Francisco Display:size=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=10;3
+font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
+font-5 = Font Awesome 5 Brands:pixelsize=10;3
+
+
+modules-left = i3
+modules-center = title 
+modules-right = pulseaudio cpu wlan date 
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/main]
+monitor = ${env:MONITOR:DP-2}
+width = 100%
+height = 3% 
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background-alt} 
+foreground = ${colors.font-colour}
+
+line-size = 4
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+font-0 = fixed:pixelsize=10;1
+;font-0 = menlo:fontformat=truetype:size=8:antialias=true;2
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=10;3
+font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
+font-5 = Font Awesome 5 Brands:pixelsize=10;3
+
+
+modules-left = i3
+modules-center = title  
+modules-right = spotify pulseaudio cpu wlan date 
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+
+
+[module/title]
+type = internal/xwindow
+format = <label>
+format-background = ${colors.amber}
+format-foreground = #444
+format-padding = 4
+
+label = %title%
+label-maxlen = 50
+
+label-empty = - 
+label-empty-foreground = #444
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+strip-wsnumbers = true 
+index-sort = true
+wrapping-scroll = false
+background = ${colors.amber}
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+
+ 
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode = %icon%
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = #fdbe0f 
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-background = ${self.background} 
+label-focused-underline = #444 
+label-focused-padding = 2 
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-background = ${self.background}
+label-unfocused-padding = 2 
+label-unfocused-foreground= #444 
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;"
+ws-icon-3 = 4;"
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 0;
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-foreground = #444
+format-background = ${colors.amber}
+background = ${colors.amber}
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.amber} 
+label =  %percentage:2%% 
+label-foreground = #444
+;padding-right = 2
+
+[module/wlan]
+
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+format-connected-foreground = #444
+format-connected-background = ${colors.amber}
+format-connected = <label-connected>
+format-connected-underline = ${colors.transparent}
+
+;label-connected = %essid%
+label-connected = "    "
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = 
+;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected-background = ${colors.amber}
+format-disconnected-foreground = #444
+
+
+[module/date]
+type = internal/date
+interval = 5
+format-foreground = #444
+format-background = ${colors.amber}
+
+date = "%d-%m-%Y"
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix-foreground = ${colors.foreground-alt}
+;format-underline = #0a6cf5
+
+label = "  %time% %date%  " 
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+background = ${colors.amber} 
+format-foreground = #444
+format-background = ${colors.amber}
+
+format-volume = <label-volume>
+label-volume = "   %percentage%%  "
+label-volume-background = ${colors.amber}
+label-volume-foreground = #444 
+
+label-muted = 🔇 muted
+label-muted-foreground = #444
+label-muted-background = ${colors.amber}
+
+[module/spotify]
+type = custom/script
+format-background = ${colors.amber}
+format-foreground = #444
+interval = 1
+format-prefix = ""
+format = <label>
+exec = python ~/.trash/polybar-spotify/spotify_status.py -f '{artist}: {song}'
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

@@ -1,0 +1,11 @@
+env/
+ENV/
+venv/
+VENV/
+
+.idea/*
+*/.idea/*
+__pycache__/*
+*/__pycache__/*
+
+*.swap

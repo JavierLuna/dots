@@ -1,6 +1,7 @@
 [user]
 	email = javierlunamolina@gmail.com
 	name = JavierLuna
+    signingkey = CA7DB3FF6F1E4BDF
 
 [color]
     ui = always

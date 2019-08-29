@@ -180,7 +180,7 @@ bindsym $mod+m move workspace to output right
 bindsym $mod+Shift+m move workspace to output left
 
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Imágenes/'
-bindsym $mod+f exec firefox
+bindsym $mod+Shift+f exec firefox
 
 exec_always feh --bg-fill /home/jluna/Imágenes/background.jpg
 

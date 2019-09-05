@@ -203,3 +203,4 @@ assign [class="spotify"] $workspace5
 
 exec ~/.screenlayout/worklayout.sh
 exec_always nitrogen --restore
+exec nm-applet

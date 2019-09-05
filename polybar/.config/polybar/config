@@ -234,9 +234,17 @@ battery = BAT0
 adapter = AC
 poll-interval = 5
 
+background = ${colors.amber}
+label-foreground = ${colors.font-colour}
 label-charging =   %percentage%%
 label-discharging =   %percentage%%
 label-full = 
+
+label-charging-foreground = ${colors.font-colour}
+label-discharging-foreground = ${colors.font-colour}
+label-full-foreground = ${colors.font-colour}  
+
+
 
 [module/wlan]
 

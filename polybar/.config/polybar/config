@@ -236,13 +236,17 @@ poll-interval = 5
 
 background = ${colors.amber}
 label-foreground = ${colors.font-colour}
-label-charging =   %percentage%%
-label-discharging =   %percentage%%
-label-full = 
+label-charging = "   %percentage%% "
+label-discharging = "   %percentage%% "
+label-full = "  "
 
 label-charging-foreground = ${colors.font-colour}
 label-discharging-foreground = ${colors.font-colour}
 label-full-foreground = ${colors.font-colour}  
+
+label-charging-background = ${colors.amber}
+label-discharging-background = ${colors.amber}
+label-full-background = ${colors.amber}
 
 
 

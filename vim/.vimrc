@@ -50,6 +50,9 @@ Plugin 'python/black'
 " Fuzzy search
 Plugin 'kien/ctrlp.vim'
 
+" Vue
+Plugin 'posva/vim-vue'
+
 " Syntax
 Plugin 'vim-syntastic/syntastic'
 

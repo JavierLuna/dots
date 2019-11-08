@@ -14,7 +14,7 @@ if [ -e "$HOME/.zsh_custom_aliases" ]; then
 fi
 
 # Activate custom aliases if present
-test -f $HOME/.zsh_custom_aliases $$ source $HOME/.zsh_custom_aliases
+test -f $HOME/.zsh_custom_aliases && source $HOME/.zsh_custom_aliases
 
 # Load .Xresources
 test -f $HOME/.Xresources && xrdb $HOME/.Xresources

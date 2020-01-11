@@ -3,12 +3,13 @@ Collection of my own dot config files
 
 ```
 alacritty   > GPU accelerated terminal
-git         > git configuration
-i3          > tiling window manager
-polybar     > Status bar
-rofi        > App launcher
-vim         > Vim editor config
-zsh         > zsh config and plugins
+kitty	    > *GPU accelerated terminal
+git         > *git configuration
+i3          > *tiling window manager
+polybar     > *Status bar
+rofi        > *App launcher
+vim         > *Vim editor config
+zsh         > *zsh config and plugins
 ```
 
 

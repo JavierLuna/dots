@@ -2,14 +2,13 @@
 Collection of my own dot config files
 
 ```
-alacritty   > GPU accelerated terminal
-kitty	    > *GPU accelerated terminal
-git         > *git configuration
-i3          > *tiling window manager
-polybar     > *Status bar
-rofi        > *App launcher
-vim         > *Vim editor config
-zsh         > *zsh config and plugins
+kitty	    > GPU accelerated terminal
+git         > Git configuration
+i3          > Tiling window manager
+polybar     > Status bar
+rofi        > App launcher
+vim         > Vim editor config
+zsh         > Zsh config and plugins
 ```
 
 
@@ -50,3 +49,6 @@ You should download:
 
 #### System San Francisco Display
 `https://github.com/supermarin/YosemiteSanFranciscoFont`
+
+#### Adobe Source Code Pro
+`https://github.com/adobe-fonts/source-code-pro`

@@ -2,6 +2,7 @@
 Collection of my own dot config files
 
 ```
+dunst	    > Notification manager
 kitty	    > GPU accelerated terminal
 git         > Git configuration
 i3          > Tiling window manager
@@ -52,3 +53,6 @@ You should download:
 
 #### Adobe Source Code Pro
 `https://github.com/adobe-fonts/source-code-pro`
+
+#### SF Mono Powerline
+`https://github.com/Twixes/SF-Mono-Powerline`

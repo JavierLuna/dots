@@ -89,10 +89,6 @@ let NERDTreeDirArrows = 1
 let g:airline_theme='distinguished'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
-set noshowmode
-set noruler
-set laststatus=
-set noshowcmd
 colorscheme distinguished
 
 "    YouCompleteMe

@@ -3,3 +3,7 @@ alias pr="cd ~/Projects"
 alias v="vim"
 alias ci3="cd ~/.config/i3"
 alias vi3="vim ~/.config/i3/config"
+
+# xbps-like aliases
+alias xi="sudo apt install"
+alias xq="apt search"

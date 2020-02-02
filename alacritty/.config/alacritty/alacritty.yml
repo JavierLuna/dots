@@ -11,6 +11,8 @@ window:
     instance: Alacritty
     general: Alacritty
 
+background_opacity: 0.85
+
 scrolling:
   history: 10000
 
@@ -47,7 +49,6 @@ colors:
     cyan: '0x34e2e2'
     white: '0xeeeeecc'
 
-background_opacity: 0.9
 
 selection:
   save_to_clipboard: true
@@ -68,9 +69,3 @@ key_bindings:
   - { key: Add,      mods: Control,       action: IncreaseFontSize }
   - { key: Subtract, mods: Control,       action: DecreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
-  # MacOS
-  - { key: Equals, mods: Command,         action: IncreaseFontSize }
-  - { key: Add,    mods: Command,         action: IncreaseFontSize }
-  - { key: Minus,  mods: Command,         action: DecreaseFontSize }
-  - { key: V,      mods: Command,         action: Paste            }
-  - { key: C,      mods: Command,         action: Copy             }

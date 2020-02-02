@@ -2,11 +2,7 @@
 
 " General vim
 
-set expandtab
 set bs=2
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 set encoding=utf-8
 set nu
 set clipboard=unnamedplus
@@ -43,6 +39,9 @@ Plugin 'tmhedberg/SimpylFold'
 
 " Auto indent
 Plugin 'vim-scripts/indentpython.vim'
+
+" Editor config
+Plugin 'editorconfig/editorconfig-vim'
 
 " Black formatter
 Plugin 'python/black'
@@ -90,6 +89,10 @@ let NERDTreeDirArrows = 1
 let g:airline_theme='distinguished'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
+set noshowmode
+set noruler
+set laststatus=
+set noshowcmd
 colorscheme distinguished
 
 "    YouCompleteMe
@@ -117,3 +120,12 @@ nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Left> <C-W><C-H>
+
+"     :w!! to sudo-write a read-only file
+cmap w!! w !sudo tee % >/dev/null
+
+"     Commenting
+au BufNewFile,BufEnter *.py vnoremap <silent> # :s/^/#/<cr>:noh<cr>
+au BufNewFile,BufEnter *.py vnoremap <silent> -# :s/^#//<cr>:noh<cr>
+au BufEnter .vimrc vnoremap <silent> # :s/^/"/<cr>:noh<cr>
+au BufEnter .vimrc vnoremap <silent> -# :s/^"//<cr>:noh<cr>

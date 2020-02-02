@@ -201,6 +201,7 @@ exec polybar right
 exec_always compton -f
 assign [class="Gnome-terminal"] $workspace1
 assign [class="URxvt"] $workspace1
+assign [class="Alacritty"] $workspace1
 assign [class="Firefox"] $workspace2
 assign [class="Sublime_text"] $workspace3
 assign [class="jetbrains-pycharm"] $workspace3

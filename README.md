@@ -3,7 +3,7 @@ Collection of my own dot config files
 
 ```
 dunst	    > Notification manager
-kitty	    > GPU accelerated terminal
+alacritty   > GPU accelerated terminal
 git         > Git configuration
 i3          > Tiling window manager
 polybar     > Status bar

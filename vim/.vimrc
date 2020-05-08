@@ -30,7 +30,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Required by Vundle
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'elixir-editors/vim-elixir'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 

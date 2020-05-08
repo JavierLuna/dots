@@ -1,0 +1,43 @@
+" Configurations
+
+"    General vim
+let mapleader=";"		" This leader is neater innit?
+set noswapfile			" Don't generate swap files	
+set encoding=utf-8		" Set encoding to utf-8
+set clipboard=unnamedplus	" Use the system's primary clipboard
+syntax on			" Enables syntax
+set noshowmode			" Remove default mode indicator
+set colorcolumn=120		" Colour the 120 char delimiter
+set cursorline			" Highlights the line I'm typing in
+set wildmenu			" Enhances command line completion
+set backspace=indent,eol,start	" Makes sure backspace works
+set splitright			" When splitting, it will do it on the right and below by default
+set hlsearch			" Highlights search results
+set confirm			" If :q, it will ask for confirmation instead of failing
+
+
+"    NERD Tree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeShowLineNumbers=0
+
+"    Airline bar
+let g:airline_theme='gruvbox'
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=1
+
+"   Color scheme
+set background=dark
+colorscheme gruvbox
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" Jedi VIM
+let g:jedi#completions_enabled = 0
+let g:jedi#use_splits_not_buffers = "right"
+
+" Neomake
+let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+call neomake#configure#automake('nrwi', 500) " Enables auto linting

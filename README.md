@@ -8,6 +8,7 @@ git         > Git configuration
 i3          > Tiling window manager
 polybar     > Status bar
 rofi        > App launcher
+nvim        > Neovim editor config
 vim         > Vim editor config
 zsh         > Zsh config and plugins
 ```

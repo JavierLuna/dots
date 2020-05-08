@@ -6,5 +6,5 @@ alias vi3="vim ~/.config/i3/config"
 alias ssm="aws ssm start-session --target"
 
 # xbps-like aliases
-alias xi="sudo apt install"
-alias xq="apt search"
+alias xi="brew install"
+alias xq="brew search"

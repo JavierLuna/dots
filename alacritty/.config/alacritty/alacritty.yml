@@ -2,8 +2,8 @@ env:
   TERM: xterm-256color
 
 window:
-  decorations: none 
-  startup_mode: Maximized
+  decorations: transparent
+  startup_mode: Windowed
 
   title: Alacritty
 
@@ -18,9 +18,9 @@ scrolling:
 
 font:
   normal:
-    family: Source Code Pro
+    family: MesloLGSNerdFontComplete-Regular 
 
-  size: 12.0
+  size: 14.0
 
 # Theme: Dracula
 colors:
@@ -63,9 +63,12 @@ mouse:
       args: []
 
 key_bindings:
-  - { key: V,        mods: Control|Shift, action: Paste            }
-  - { key: C,        mods: Control|Shift, action: Copy             }
-  - { key: Equals,   mods: Control,       action: ResetFontSize }
-  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  - { key: V,        mods: Command|Shift, action: Paste }
+  - { key: C,        mods: Command|Shift, action: Copy }
+  - { key: Equals,   mods: Command,       action: ResetFontSize }
+  - { key: Add,      mods: Command,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Command,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Command,       action: DecreaseFontSize }
+  - { key: N,        mods: Command,       action: SpawnNewInstance }
+  - { key: F,        mods: Command,       action: ToggleFullscreen }
+  - { key: Q,        mods: Command,       action: Quit }

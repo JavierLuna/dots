@@ -19,4 +19,8 @@ test -f $HOME/.zsh_custom_aliases && source $HOME/.zsh_custom_aliases
 # Load .Xresources
 test -f $HOME/.Xresources && xrdb $HOME/.Xresources
 
+# Source and activate third party aliases/programs
+eval $(thefuck --alias)
+test -f $HOME/.fzf/shell/key-bindings.zsh && source ~/.fzf/shell/key-bindings.zsh
+
 neofetch

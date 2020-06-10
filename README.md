@@ -33,6 +33,7 @@ At the moment, those are:
 ```
 ubuntu
 void
+macos
 ```
 
 ### Ubuntu
@@ -42,6 +43,10 @@ I use Ubuntu mainly for my work laptop. In addition, I think Ubuntu is better fo
 ### Void
 
 For my main and personal workstation I'm currently using Void Linux. Void linux is a minimal distro made from the ground up, and I love it!
+
+### MacOs
+
+My personal laptop is a 2013 Macbook Pro and I like it a lot. I usually use linux for programming, but I find my macbook really pleasing to use!
 
 ### Fonts
 

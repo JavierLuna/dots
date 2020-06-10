@@ -1,0 +1,8 @@
+# Repository definition
+Use 'JavierLuna/sardine-stacks'
+
+Load 'spark'
+Load 'postgres'
+Load 'mariadb'
+Load 'mysql'
+Load 'mongo'

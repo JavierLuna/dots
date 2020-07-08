@@ -6,3 +6,4 @@ Load 'postgres'
 Load 'mariadb'
 Load 'mysql'
 Load 'mongo'
+Load 'dynamodb' as dynamo

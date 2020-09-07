@@ -14,9 +14,10 @@ set backspace=indent,eol,start	" Makes sure backspace works
 set splitright			" When splitting, it will do it on the right and below by default
 set hlsearch			" Highlights search results
 set confirm			" If :q, it will ask for confirmation instead of failing
+set mouse=a			" Add mouse support
 
 
-"    NERD Tree
+" NERD Tree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1

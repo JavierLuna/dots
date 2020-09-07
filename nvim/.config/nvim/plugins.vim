@@ -43,6 +43,9 @@ Plug 'jmcantrell/vim-virtualenv'	" Virtualenv awareness
 " Elixir
 Plug 'slashmili/alchemist.vim'		" Elixir autocomplete to deoplete
 
+" Node & Typescript
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+
 " Icons, must be installed last
 Plug 'ryanoasis/vim-devicons'
 

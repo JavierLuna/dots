@@ -18,36 +18,19 @@ call plug#begin('~/.vim/plugged')
 
 " Editor
 Plug 'scrooloose/nerdtree'		" NERD Tree
-Plug 'vim-airline/vim-airline'		" Airline status bar
-Plug 'vim-airline/vim-airline-themes'	" Airline status themes
 Plug 'morhetz/gruvbox'			" Gruvbox theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fzf
 Plug 'junegunn/fzf.vim'			" Fzf but better
 
+
 " Dev
-Plug 'editorconfig/editorconfig-vim'	" Editorconfig
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Deoplete (autocompletion)
 Plug 'jiangmiao/auto-pairs'		" Auto pairs (, 
 Plug 'scrooloose/nerdcommenter'		" NERD commenter
 Plug 'sheerun/vim-polyglot'		" Syntax to a bunch of file extensions
-Plug 'airblade/vim-gitgutter'		" Git integration
-Plug 'tpope/vim-fugitive'		" Git integration
 
 " Python
 Plug 'tmhedberg/SimpylFold'		" Simply Fold
-Plug 'zchee/deoplete-jedi'		" Jedi completion
-Plug 'davidhalter/jedi-vim'		" Jedi Go-to definition...
-Plug 'neomake/neomake'			" Code formatting
 Plug 'jmcantrell/vim-virtualenv'	" Virtualenv awareness
-
-" Elixir
-Plug 'slashmili/alchemist.vim'		" Elixir autocomplete to deoplete
-
-" Node & Typescript
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-
-" Icons, must be installed last
-Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

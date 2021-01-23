@@ -10,7 +10,6 @@ polybar     > Status bar
 rofi        > App launcher
 nvim        > Neovim editor config
 sardine     > Sardine configuration
-vim         > Vim editor config
 zsh         > Zsh config and plugins
 ```
 

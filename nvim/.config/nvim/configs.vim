@@ -32,13 +32,10 @@ let g:airline#extensions#branch#enabled=1
 set background=dark
 colorscheme gruvbox
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-
-" Jedi VIM
-let g:jedi#completions_enabled = 0
-let g:jedi#use_splits_not_buffers = "right"
 
 " Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 call neomake#configure#automake('nrwi', 500) " Enables auto linting
+
+" Fzf Porject
+let g:fzfSwitchProjectWorkspaces = [ '~/projects' ]

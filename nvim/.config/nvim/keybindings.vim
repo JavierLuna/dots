@@ -14,8 +14,8 @@ nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Left> <C-W><C-H>
 nnoremap <C-S-Up> :resize +2<CR> 
 nnoremap <C-S-Down> :resize -2<CR>
-nnoremap <C-S-Left> :vertical resize +2<CR>
-nnoremap <C-S-Right> :vertical resize -2<CR>
+nnoremap <C-S-Left> :vertical resize -2<CR>
+nnoremap <C-S-Right> :vertical resize +2<CR>
 nnoremap <C-s> :vsp <CR>
 
 " Sudo write

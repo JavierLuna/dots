@@ -23,20 +23,20 @@ Plug 'vim-airline/vim-airline-themes'	" Airline status themes
 Plug 'morhetz/gruvbox'			" Gruvbox theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fzf
 Plug 'junegunn/fzf.vim'			" Fzf but better
+Plug 'benwainwright/fzf-project' 	" Change projects
 
 " Dev
 Plug 'editorconfig/editorconfig-vim'	" Editorconfig
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Deoplete (autocompletion)
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code completion
 Plug 'jiangmiao/auto-pairs'		" Auto pairs (, 
 Plug 'scrooloose/nerdcommenter'		" NERD commenter
 Plug 'sheerun/vim-polyglot'		" Syntax to a bunch of file extensions
 Plug 'airblade/vim-gitgutter'		" Git integration
 Plug 'tpope/vim-fugitive'		" Git integration
+Plug 'sbdchd/neoformat'			" Formatting
 
 " Python
 Plug 'tmhedberg/SimpylFold'		" Simply Fold
-Plug 'zchee/deoplete-jedi'		" Jedi completion
-Plug 'davidhalter/jedi-vim'		" Jedi Go-to definition...
 Plug 'neomake/neomake'			" Code formatting
 Plug 'jmcantrell/vim-virtualenv'	" Virtualenv awareness
 
@@ -56,5 +56,6 @@ call plug#end()
 " If this is first installation, sync everything
 if plug_install
     PlugInstall --sync
+    CocInstall coc-json coc-tsserver coc-python coc-sh
 endif
 unlet plug_install

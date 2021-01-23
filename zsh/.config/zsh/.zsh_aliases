@@ -1,0 +1,20 @@
+# jluna's ZSH aliases
+alias l="ls -la"
+alias pr="cd ~/Projects"
+alias v="nvim"
+alias n="nvim"
+alias ssm="aws ssm start-session --target"
+
+# git
+alias gs="git status"
+alias gc="git commit"
+alias ga="git add"
+
+# xbps-like aliases
+alias xi="brew install"
+alias xq="brew search"
+
+
+# Third party
+eval $(thefuck --alias) # thefuck
+test -f $HOME/.fzf/shell/key-bindings.zsh && source ~/.fzf/shell/key-bindings.zsh # FZF key bindings

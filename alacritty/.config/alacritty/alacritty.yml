@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 
 window:
-  decorations: transparent
+  decorations: None
   startup_mode: Windowed
 
   title: Alacritty
@@ -18,8 +18,8 @@ scrolling:
 
 font:
   normal:
-    family: MesloLGSNerdFontComplete-Regular 
-
+    family: MesloLGS Nerd Font
+    style: Regular
   size: 14.0
 
 # Theme: Dracula
@@ -66,8 +66,7 @@ key_bindings:
   - { key: V,        mods: Command|Shift, action: Paste }
   - { key: C,        mods: Command|Shift, action: Copy }
   - { key: Equals,   mods: Command,       action: ResetFontSize }
-  - { key: Add,      mods: Command,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Command,       action: DecreaseFontSize }
+  - { key: Plus,      mods: Command,       action: IncreaseFontSize }
   - { key: Minus,    mods: Command,       action: DecreaseFontSize }
   - { key: N,        mods: Command,       action: SpawnNewInstance }
   - { key: F,        mods: Command,       action: ToggleFullscreen }

@@ -13,6 +13,7 @@ alias ga="git add"
 # xbps-like aliases
 alias xi="brew install"
 alias xq="brew search"
+alias xr="brew remove"
 
 
 # Third party

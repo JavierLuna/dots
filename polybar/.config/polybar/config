@@ -8,13 +8,22 @@ font = #f5ffffff
 dim-font = #f5949392
 alert = #bd2c40
 
+[fonts]
+font-0 = pango:System San Francisco Display:size=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=10;0
+font-4 = Font Awesome 5 Free Solid:pixelsize=10;0
+font-5 = Font Awesome 5 Brands:pixelsize=10;0
+
+
 [sizes]
 bar-line=2
 bar-border=0
 
 
 [bar/left]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 3% 
 radius = 0.0
@@ -29,12 +38,12 @@ line-color = ${colors.bar-line}
 border-size = ${sizes.bar-border}
 border-color = ${colors.bar-border}
 
-font-0 = pango:System San Francisco Display:size=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=10;0
-font-4 = Font Awesome 5 Free Solid:pixelsize=10;0
-font-5 = Font Awesome 5 Brands:pixelsize=10;0
+font-0 = ${fonts.font-0} 
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
+font-4 = ${fonts.font-4}
+font-5 = ${fonts.font-5}
 
 
 modules-left = i3
@@ -62,12 +71,12 @@ line-color = ${colors.bar-line}
 border-size = ${sizes.bar-border}
 border-color = ${colors.bar-border} 
 
-font-0 = pango:System San Francisco Display:size=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=10;3
-font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
-font-5 = Font Awesome 5 Brands:pixelsize=10;3
+font-0 = ${fonts.font-0} 
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
+font-4 = ${fonts.font-4}
+font-5 = ${fonts.font-5}
 
 
 modules-left = i3
@@ -80,7 +89,7 @@ cursor-scroll = ns-resize
 
 
 [bar/main]
-monitor = ${env:MONITOR:DP-3}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 3% 
 radius = 0.0
@@ -95,21 +104,18 @@ line-color = ${colors.bar-line}
 border-size = ${sizes.bar-border}
 border-color = ${colors.bar-border}
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=10;3
-font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
-font-5 = Font Awesome 5 Brands:pixelsize=10;3
-
+font-0 = ${fonts.font-0} 
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
+font-4 = ${fonts.font-4}
+font-5 = ${fonts.font-5}
 
 modules-left = i3
 modules-center = title  
 modules-right = spotify pulseaudio battery cpu wlan date 
 tray-position = right
 tray-padding = 2
-
-override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize

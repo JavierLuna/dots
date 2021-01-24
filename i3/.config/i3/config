@@ -217,3 +217,4 @@ exec dunst
 exec ~/.screenlayout/worklayout.sh
 exec_always nitrogen --restore
 exec nm-applet
+exec setxkbmap es

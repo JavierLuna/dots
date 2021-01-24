@@ -11,7 +11,7 @@ source $HOME/.zsh/antigen.zsh
 antigen init $ZSH_CONFIG_DIR/.antigenrc
 
 # Source platform-specific zsh if any
-test -f $ZSH_CONFIG_DIR/.zshrc_custom && source $ZSH_CONFIG_DIR/.zshrc_custom
+test -f $HOME/.zshrc_custom && source $HOME/.zshrc_custom
 
 # Activate vim bindings
 bindkey -v

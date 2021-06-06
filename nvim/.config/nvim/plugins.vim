@@ -43,9 +43,6 @@ Plug 'jmcantrell/vim-virtualenv'	" Virtualenv awareness
 " Elixir
 Plug 'slashmili/alchemist.vim'		" Elixir autocomplete to deoplete
 
-" Node & Typescript
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-
 " Icons, must be installed last
 Plug 'ryanoasis/vim-devicons'
 
@@ -56,6 +53,6 @@ call plug#end()
 " If this is first installation, sync everything
 if plug_install
     PlugInstall --sync
-    CocInstall coc-json coc-tsserver coc-python coc-sh
+    CocInstall coc-json coc-tsserver coc-pyright coc-sh
 endif
 unlet plug_install

@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 
 window:
-  decorations: None
+  decorations: transparent
   startup_mode: Windowed
 
   title: Alacritty
@@ -59,7 +59,7 @@ cursor:
 mouse:
   url:
     launcher:
-      program: xdg-open
+      program: open 
       args: []
 
 key_bindings:

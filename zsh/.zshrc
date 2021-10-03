@@ -16,4 +16,4 @@ test -f $HOME/.zshrc_custom && source $HOME/.zshrc_custom
 # Activate vim bindings
 bindkey -v
 
-neofetch
+afetch

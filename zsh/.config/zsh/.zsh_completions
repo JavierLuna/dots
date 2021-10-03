@@ -1,4 +1,6 @@
 autoload -Uz compinit
 compinit
 
+source $HOME/.fzf/shell/completion.zsh
+source $HOME/.fzf/shell/key-bindings.zsh
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh) # kubectl

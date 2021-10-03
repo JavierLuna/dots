@@ -24,6 +24,7 @@ Plug 'morhetz/gruvbox'			" Gruvbox theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fzf
 Plug 'junegunn/fzf.vim'			" Fzf but better
 Plug 'benwainwright/fzf-project' 	" Change projects
+Plug 'christoomey/vim-tmux-navigator' "Tmux integration
 
 " Dev
 Plug 'editorconfig/editorconfig-vim'	" Editorconfig

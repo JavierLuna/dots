@@ -57,7 +57,7 @@ cursor:
   style: Block
 
 mouse:
-  url:
+  hints:
     launcher:
       program: open 
       args: []
@@ -65,8 +65,7 @@ mouse:
 key_bindings:
   - { key: V,        mods: Command|Shift, action: Paste }
   - { key: C,        mods: Command|Shift, action: Copy }
-  - { key: Equals,   mods: Command,       action: ResetFontSize }
-  - { key: Plus,      mods: Command,       action: IncreaseFontSize }
+  - { key: Equals,      mods: Command,       action: IncreaseFontSize }
   - { key: Minus,    mods: Command,       action: DecreaseFontSize }
   - { key: N,        mods: Command,       action: SpawnNewInstance }
   - { key: F,        mods: Command,       action: ToggleFullscreen }
@@ -81,3 +80,12 @@ key_bindings:
   - { key: 42,        mods: Alt,    chars: "}" } # cierra llaves `}`
   - { key: 33,        mods: Alt,    chars: "[" } # abre corchetes `[`
   - { key: 30,        mods: Alt,    chars: "]" } # cierra corchetes `]`
+  - { key: Key1,  mods: Control,       chars: "\x06\x31" }
+  - { key: Key2,  mods: Control,       chars: "\x06\x32" }
+  - { key: Key3,  mods: Control,       chars: "\x06\x33" }
+  - { key: Key4,  mods: Control,       chars: "\x06\x34" }
+  - { key: Key5,  mods: Control,       chars: "\x06\x35" }
+  - { key: Key6,  mods: Control,       chars: "\x06\x36" }
+  - { key: Key7,  mods: Control,       chars: "\x06\x37" }
+  - { key: Key8,  mods: Control,       chars: "\x06\x38" }
+  - { key: Key9,  mods: Control,       chars: "\x06\x39" }

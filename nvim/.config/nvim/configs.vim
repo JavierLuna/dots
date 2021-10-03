@@ -17,6 +17,10 @@ set confirm			" If :q, it will ask for confirmation instead of failing
 set mouse=a			" Add mouse support
 
 
+" Tmux integration
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 2
+
 " NERD Tree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeMinimalUI = 1
@@ -32,10 +36,18 @@ let g:airline#extensions#branch#enabled=1
 set background=dark
 colorscheme gruvbox
 
+" Numbers
+set number
+set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
 " Neomake
 let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 call neomake#configure#automake('nrwi', 500) " Enables auto linting
+
+" Neoformat
+let g:neoformat_enabled_python = [ 'black' ]
 
 " Fzf Porject
 let g:fzfSwitchProjectWorkspaces = [ '~/projects' ]

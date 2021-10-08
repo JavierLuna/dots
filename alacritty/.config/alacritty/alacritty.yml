@@ -2,16 +2,15 @@ env:
   TERM: xterm-256color
 
 window:
-  decorations: transparent
+  decorations: Full
   startup_mode: Windowed
+  opacity: 0.85
 
   title: Alacritty
 
   class:
     instance: Alacritty
     general: Alacritty
-
-background_opacity: 0.85
 
 scrolling:
   history: 10000
@@ -59,7 +58,7 @@ cursor:
 mouse:
   hints:
     launcher:
-      program: open 
+      program: xdg-open 
       args: []
 
 key_bindings:

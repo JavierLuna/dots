@@ -49,5 +49,10 @@ call neomake#configure#automake('nrwi', 500) " Enables auto linting
 " Neoformat
 let g:neoformat_enabled_python = [ 'black' ]
 
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
 " Fzf Porject
-let g:fzfSwitchProjectWorkspaces = [ '~/projects' ]
+let g:fzfSwitchProjectWorkspaces = [ '~/Projects' ]

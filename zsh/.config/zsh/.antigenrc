@@ -11,6 +11,6 @@ antigen bundle JavierLuna/zsh-cdenv
 
 # Pure theme
 antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure|main
+antigen bundle sindresorhus/pure@main
 
 antigen apply

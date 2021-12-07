@@ -1,5 +1,6 @@
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export POSSIBLE_ENV_NAMES=( "env" )
-path+=('/Users/javierlunamolina/.fzf/bin')
+path+=("$HOME/.fzf/bin")
+path+=("$HOME/.cargo/bin")
 export PATH

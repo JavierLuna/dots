@@ -4,7 +4,7 @@
 export ZSH_CONFIG_DIR=$HOME/.config/zsh
 source $ZSH_CONFIG_DIR/.zsh_aliases
 source $ZSH_CONFIG_DIR/.zsh_env_vars
-source $ZSH_CONFIG_DIR/.zsh_completions
+source $ZSH_CONFIG_DIR/.zsh_tools
 
 # antigen
 source $HOME/.zsh/antigen.zsh

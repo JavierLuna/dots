@@ -23,6 +23,7 @@ Plug 'vim-airline/vim-airline-themes'	" Airline status themes
 Plug 'morhetz/gruvbox'			" Gruvbox theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fzf
 Plug 'junegunn/fzf.vim'			" Fzf but better
+Plug 'junegunn/goyo.vim'    " Distraction free editing
 Plug 'benwainwright/fzf-project' 	" Change projects
 Plug 'christoomey/vim-tmux-navigator' "Tmux integration
 

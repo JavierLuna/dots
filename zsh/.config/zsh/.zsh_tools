@@ -2,4 +2,6 @@ autoload -Uz compinit
 compinit
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh) # kubectl
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # FZF
+
+test -f $HOME/.fzf.zsh && source ~/.fzf.zsh
+test -f $HOME/.cargo/env && source $HOME/.cargo/env # Rust

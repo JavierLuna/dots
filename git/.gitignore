@@ -1,11 +1,6 @@
-env/
-ENV/
-venv/
-VENV/
+.DS_Store
+.idea
+venv
+env
 
-.idea/*
-*/.idea/*
-__pycache__/*
-*/__pycache__/*
-
-*.swap
+.attach_pid*

@@ -1,7 +1,6 @@
 [user]
+	name = Javier Luna Molina
 	email = javierlunamolina@gmail.com
-	name = JavierLuna
-	signingkey = CA7DB3FF6F1E4BDF
 
 [color]
 	ui = always
@@ -14,10 +13,7 @@
 	decorate = always
 	showbranch = always
 
-[commit]
-	gpgsign = true
-
 [core]
-	editor = vim
+	editor = nvim
 	pager = less -F -X
 	excludesfile = ~/.gitignore

@@ -4,14 +4,13 @@ env:
 window:
   decorations: transparent
   startup_mode: Windowed
+  background_opacity: 0.85
 
   title: Alacritty
 
   class:
     instance: Alacritty
     general: Alacritty
-
-background_opacity: 0.85
 
 scrolling:
   history: 10000

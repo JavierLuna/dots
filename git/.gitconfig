@@ -16,4 +16,4 @@
 [core]
 	editor = nvim
 	pager = less -F -X
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global

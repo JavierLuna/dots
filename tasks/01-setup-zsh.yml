@@ -1,0 +1,23 @@
+---
+- name: Check if current .zshrc is a symlink or not
+  stat:
+    path: ~/.zshrc
+  register: zshrcsym
+
+- name: Removing hardlinked .zshrc to allow stowing
+  file:
+    path: ~/.zshrc
+    state: absent
+  when: zshrcsym.stat.islnk is not defined
+
+- name: Installing Antigen
+  shell:
+    cmd: |
+      mkdir -p ~/.zsh
+      curl -L git.io/antigen > ~/.zsh/antigen.zsh
+    creates: ~/.zsh/antigen.zsh
+
+- name: Stow zsh configuration
+  shell: 
+    cmd: $(brew --prefix)/bin/stow zsh
+    chdir: "{{ dotfiles_local }}"

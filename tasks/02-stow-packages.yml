@@ -1,0 +1,6 @@
+---
+- name: Stow dotfiles
+  shell: 
+    cmd: "$(brew --prefix)/bin/stow {{ item }}"
+    chdir: "{{ dotfiles_local }}" 
+  loop: "{{ stows }}"

@@ -1,0 +1,11 @@
+---
+- name: Clone nvchad 
+  git:
+    repo: 'https://github.com/NvChad/NvChad' 
+    dest: ~/.config/nvim 
+    depth: 1
+
+- name: Stow nvchad configuration
+  shell: 
+    cmd: $(brew --prefix)/bin/stow nvchad
+    chdir: "{{ dotfiles_local }}"

@@ -4,7 +4,6 @@
     repo: 'https://github.com/NvChad/NvChad' 
     dest: ~/.config/nvim 
     depth: 1
-    version: 9e3a43302c57d61f78b21e6f565d8026f5bd8d19
 
 - name: Stow nvchad configuration
   shell: 

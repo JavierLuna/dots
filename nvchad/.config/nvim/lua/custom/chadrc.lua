@@ -16,9 +16,6 @@ M.plugins = {
 		lspconfig = {
 			setup_lspconf = "custom.plugins.lspconfig",
 		},
-		statusline = {
-			separator_style = "slant",
-		},
 	},
 	remove = {
 		"NvChad/nvterm",

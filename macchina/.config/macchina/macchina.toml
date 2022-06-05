@@ -1,0 +1,38 @@
+long_uptime = false
+long_shell = false
+long_kernel = true
+
+current_shell = true
+
+theme = "MacOS"
+show = [
+  "Host", 
+  "OperatingSystem", 
+  "Processor",
+  "LocalIP", 
+  "Uptime", 
+  "Shell",
+  "Kernel",
+]
+# Displays only the specified readouts.
+# Accepted values (case-sensitive):
+#   - Host
+#   - Machine
+#   - Kernel
+#   - Distribution
+#   - OperatingSystem
+#   - DesktopEnvironment
+#   - WindowManager
+#   - Resolution
+#   - Backlight
+#   - Packages
+#   - LocalIP
+#   - Terminal
+#   - Shell
+#   - Uptime
+#   - Processor
+#   - ProcessorLoad
+#   - Memory
+#   - Battery
+# Example:
+#   show = ["Battery", "Memory", ...]

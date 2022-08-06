@@ -3,9 +3,15 @@ local b = null_ls.builtins
 
 local sources = {
 
+	-- Typescript, Javascript, HTML, CSS
 	b.formatting.prettierd.with({ filetypes = { "html", "markdown", "css", "typescript", "javascript" } }),
 	b.diagnostics.eslint_d,
 	b.code_actions.eslint_d,
+
+	-- Python
+	b.formatting.black,
+	b.diagnostics.mypy,
+	b.diagnostics.flake8,
 
 	-- Lua
 	b.formatting.stylua,

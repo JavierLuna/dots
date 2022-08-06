@@ -4,7 +4,6 @@ M.overrides = {
 	git = {
 		enable = true,
 	},
-	auto_close = true,
 }
 
 return M

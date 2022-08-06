@@ -1,27 +1,21 @@
-local M = {}
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
 
-M.setup_lsp = function(attach, capabilities)
-	local lspconfig = require("lspconfig")
-
-	-- lspservers with default config
-	local servers = {
-		"html",
-		"cssls",
-		"dockerls",
-		"jsonls",
-		"java_language_server",
-		"kotlin_language_server",
-		"pyright",
-		"tsserver",
-		"vimls",
-	}
-
-	for _, lsp in ipairs(servers) do
-		lspconfig[lsp].setup({
-			on_attach = attach,
-			capabilities = capabilities,
-		})
-	end
+local lspconfig = require("lspconfig")
+local servers = {
+	"html",
+	"cssls",
+	"dockerls",
+	"jsonls",
+	"java_language_server",
+	"kotlin_language_server",
+	"pyright",
+	"tsserver",
+	"vimls",
+}
+for _, lsp in ipairs(servers) do
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
 end
-
-return M

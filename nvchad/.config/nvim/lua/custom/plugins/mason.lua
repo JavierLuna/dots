@@ -2,15 +2,14 @@ local M = {}
 
 M.overrides = {
 	ensure_installed = {
-		"html",
-		"cssls",
+		"html-lsp",
+		"css-ls",
+		"tsserver",
 		"dockerls",
 		"jsonls",
-		"java_language_server",
-		"kotlin_language_server",
 		"pyright",
-		"tsserver",
 		"vimls",
+    "lua-language-server",
 	},
 }
 

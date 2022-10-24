@@ -1,5 +1,29 @@
 return {
-	["alexghergh/nvim-tmux-navigation"] = {
+
+  ---------------- Plugin Overrides ------------------
+
+  ["kyazdani42/nvim-tree.lua"] = {
+    override_options = require("custom.plugins.nvim-tree").overrides
+  },
+
+  ["nvim-treesitter/nvim-treesitter"] = {
+    override_options = require("custom.plugins.treesitter").overrides
+  },
+
+  ["williamboman/mason.nvim"] = {
+    override_options = require("custom.plugins.mason").overrides
+  },
+
+  ["neovim/nvim-lspconfig"] = {
+		config = function()
+			require("plugins.configs.lspconfig")
+			require("custom.plugins.lspconfig")
+		end,
+	},
+
+  ---------------- Custom plugins ------------------
+
+  ["alexghergh/nvim-tmux-navigation"] = {
 		config = function()
 			require("nvim-tmux-navigation").setup({
 				disable_when_zoomed = true, -- defaults to false
@@ -18,10 +42,8 @@ return {
 			require("custom.plugins.null-ls").setup()
 		end,
 	},
-	["neovim/nvim-lspconfig"] = {
-		config = function()
-			require("plugins.configs.lspconfig")
-			require("custom.plugins.lspconfig")
-		end,
-	},
+
+  ---------------- Remove unwanted plugins ------------------
+
+  ["goolord/alpha-nvim"] = false,
 }

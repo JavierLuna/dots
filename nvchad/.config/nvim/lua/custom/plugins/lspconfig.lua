@@ -7,8 +7,6 @@ local servers = {
 	"cssls",
 	"dockerls",
 	"jsonls",
-	"java_language_server",
-	"kotlin_language_server",
 	"pyright",
 	"tsserver",
 	"vimls",

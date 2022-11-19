@@ -21,6 +21,7 @@ M.overrides = {
 		"rust",
 		"scala",
 		"scss",
+		"swift",
 		"toml",
 		"tsx",
 		"typescript",

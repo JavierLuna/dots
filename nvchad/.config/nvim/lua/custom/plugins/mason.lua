@@ -8,8 +8,9 @@ M.overrides = {
 		"dockerls",
 		"jsonls",
 		"pyright",
+		"rust-analyzer",
 		"vimls",
-    "lua-language-server",
+		"lua-language-server",
 	},
 }
 

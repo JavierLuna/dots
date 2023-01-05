@@ -8,6 +8,7 @@ local servers = {
 	"dockerls",
 	"jsonls",
 	"pyright",
+	"rust_analyzer",
 	"tsserver",
 	"vimls",
 }

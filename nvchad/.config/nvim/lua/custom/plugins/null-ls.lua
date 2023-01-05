@@ -16,6 +16,9 @@ local sources = {
 	-- Lua
 	b.formatting.stylua,
 
+	-- Rust
+	b.formatting.rustfmt,
+
 	-- Swift
 	b.formatting.swiftformat,
 

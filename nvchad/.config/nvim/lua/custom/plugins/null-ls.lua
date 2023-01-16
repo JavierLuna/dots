@@ -4,7 +4,7 @@ local b = null_ls.builtins
 local sources = {
 
 	-- Typescript, Javascript, HTML, CSS
-	b.formatting.prettierd.with({ filetypes = { "html", "markdown", "css", "typescript", "javascript", "json" } }),
+	b.formatting.prettierd.with({ filetypes = { "html", "markdown", "css", "typescript", "javascript", "typescriptreact", "json" } }),
 	b.diagnostics.eslint_d,
 	b.code_actions.eslint_d,
 

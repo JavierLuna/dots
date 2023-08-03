@@ -1,11 +1,12 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
+local lspconfig = require("lspconfig")
 local servers = {
 	"html",
 	"cssls",
 	"dockerls",
+	"gopls",
 	"jsonls",
 	"pyright",
 	"rust_analyzer",

@@ -1,6 +1,5 @@
 # jluna's ZSH config
-# First, install antigen like this:
-# curl -L git.io/antigen > .zsh/antigen.zsh
+test -f $HOME/.zsh/antigen.zsh || curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
 export ZSH_CONFIG_DIR=$HOME/.config/zsh
 source $ZSH_CONFIG_DIR/.zsh_aliases
 source $ZSH_CONFIG_DIR/.zsh_env_vars

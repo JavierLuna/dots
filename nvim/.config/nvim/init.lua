@@ -17,15 +17,15 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('lazy').setup {
-  'tpope/vim-fugitive', -- Git
-  'tpope/vim-sleuth', -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+  'tpope/vim-fugitive',                    -- Git
+  'tpope/vim-sleuth',                      -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
   {
-    'neovim/nvim-lspconfig', -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',               -- LSP Configuration & Plugins
     dependencies = {
-      'williamboman/mason.nvim', -- Installs LSP servers
+      'williamboman/mason.nvim',           -- Installs LSP servers
       'williamboman/mason-lspconfig.nvim', -- Installs LSP server configurations
-      'j-hui/fidget.nvim', -- Status updates on the right side
-      'folke/neodev.nvim', -- Additional dev setup for LSPs
+      'j-hui/fidget.nvim',                 -- Status updates on the right side
+      'folke/neodev.nvim',                 -- Additional dev setup for LSPs
     },
   },
   {
@@ -41,13 +41,12 @@ require('lazy').setup {
     },
   },
   {
-    'navarasu/onedark.nvim', -- Theme
+    'ellisonleao/gruvbox.nvim', -- Theme
     priority = 1000,
     config = function()
-      require('onedark').setup {
-        style = 'deep',
+      require('gruvbox').setup {
       }
-      require('onedark').load()
+      require('gruvbox').load()
     end,
   },
   {
@@ -55,7 +54,7 @@ require('lazy').setup {
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'gruvbox',
         disabled_filetypes = { 'NvimTree' },
         component_separators = '|',
         section_separators = '',
@@ -63,7 +62,7 @@ require('lazy').setup {
     },
   },
   { 'numToStr/Comment.nvim', opts = {} }, -- Smart comments
-  { 'folke/neoconf.nvim', cmd = 'Neoconf' },
+  { 'folke/neoconf.nvim',    cmd = 'Neoconf' },
   {
     'alexghergh/nvim-tmux-navigation', -- Navigation with tmux
     lazy = false,
@@ -89,15 +88,16 @@ require('lazy').setup {
 
 -- [[ SETTINGS ]]
 
-vim.o.hlsearch = true -- Set highlight on search
-vim.wo.number = true -- Make line numbers default
-vim.o.mouse = 'a' -- Enable mouse mode
-vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim.
-vim.o.breakindent = true -- Enable break indent
-vim.o.undofile = true -- Save undo history
-vim.wo.signcolumn = 'yes' -- Keep signcolumn on by default
+vim.o.hlsearch = true                  -- Set highlight on search
+vim.wo.number = true                   -- Make line numbers default
+vim.o.mouse = 'a'                      -- Enable mouse mode
+vim.o.clipboard = 'unnamedplus'        -- Sync clipboard between OS and Neovim.
+vim.o.breakindent = true               -- Enable break indent
+vim.o.undofile = true                  -- Save undo history
+vim.wo.signcolumn = 'yes'              -- Keep signcolumn on by default
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 vim.o.termguicolors = true
+vim.cmd('hi NonText guifg=bg')
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true

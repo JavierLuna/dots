@@ -8,11 +8,16 @@ return {
     git = {
       enable = true,
     },
+    view = {
+      number = false,
+      relativenumber = false,
+    },
     filters = {
       dotfiles = true,
       custom = { 'node_modules' },
     },
     renderer = {
+      root_folder_label = false,
       highlight_git = true,
       icons = {
         show = {

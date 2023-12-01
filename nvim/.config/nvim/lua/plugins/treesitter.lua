@@ -1,5 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter', -- Highlight and navigate code
+  lazy = false,
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
   },
@@ -12,22 +13,16 @@ return {
       'bash',
       'c',
       'css',
+      'lua',
       'dockerfile',
-      'elixir',
-      'go',
       'html',
       'java',
       'javascript',
       'json5',
-      'kotlin',
-      'llvm',
-      'make',
       'python',
       'regex',
       'ruby',
       'rust',
-      'scala',
-      'scss',
       'smithy',
       'swift',
       'toml',
@@ -97,8 +92,8 @@ return {
     },
   },
   config = function(_, opts)
-    vim.defer_fn(function()
-      require('nvim-treesitter.configs').setup(opts)
-    end, 0)
+    --   vim.defer_fn(function()
+    require('nvim-treesitter.configs').setup(opts)
+    -- end, 0)
   end,
 }

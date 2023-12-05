@@ -16,6 +16,9 @@ return {
       dotfiles = true,
       custom = { 'node_modules' },
     },
+    update_focused_file = {
+      enable = true,
+    },
     renderer = {
       root_folder_label = false,
       highlight_git = true,

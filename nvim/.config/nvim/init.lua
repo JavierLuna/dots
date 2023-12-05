@@ -24,9 +24,21 @@ require('lazy').setup {
     dependencies = {
       'williamboman/mason.nvim',           -- Installs LSP servers
       'williamboman/mason-lspconfig.nvim', -- Installs LSP server configurations
-      'j-hui/fidget.nvim',                 -- Status updates on the right side
       'folke/neodev.nvim',                 -- Additional dev setup for LSPs
     },
+  },
+  {
+    'vigoux/notifier.nvim',
+    opts = {
+      components = {
+        "nvim",
+        "lsp"
+      },
+      notify = {
+        clear_time = 3000,
+        min_level = vim.log.levels.INFO
+      },
+    }
   },
   {
     'lewis6991/gitsigns.nvim', -- Adds git signs to the side (gutter)
@@ -37,6 +49,7 @@ require('lazy').setup {
         delete = { text = '_' },
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
+        untracked = { text = '|' }
       },
     },
   },
@@ -98,6 +111,7 @@ vim.wo.signcolumn = 'yes'              -- Keep signcolumn on by default
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 vim.o.termguicolors = true
 vim.cmd('hi NonText guifg=bg')
+vim.cmd('hi SignColumn guibg=bg')
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
@@ -106,6 +120,9 @@ vim.o.smartcase = true
 -- Decrease update time
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- [[ KEYMAPS ]]
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })

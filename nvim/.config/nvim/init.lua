@@ -74,8 +74,7 @@ require('lazy').setup {
       },
     },
   },
-  { 'numToStr/Comment.nvim', opts = {} }, -- Smart comments
-  { 'folke/neoconf.nvim',    cmd = 'Neoconf' },
+  { 'folke/neoconf.nvim',         cmd = 'Neoconf' },
   {
     'alexghergh/nvim-tmux-navigation', -- Navigation with tmux
     lazy = false,
@@ -97,6 +96,7 @@ require('lazy').setup {
   { import = 'plugins.nvim-cmp' },
   { import = 'plugins.conform' },
   { import = 'plugins.bufferline' },
+  { import = 'plugins.comment' },
 }
 
 -- [[ SETTINGS ]]
@@ -126,6 +126,9 @@ vim.opt.splitbelow = true
 
 -- [[ KEYMAPS ]]
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+vim.keymap.set({ 'v' }, '>', '>gv', { silent = true, desc = "Indent line" })
+vim.keymap.set({ 'v' }, '<', '<gv', { silent = true, desc = "De-indent line" })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })

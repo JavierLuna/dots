@@ -54,15 +54,6 @@ require('lazy').setup {
     },
   },
   {
-    'ellisonleao/gruvbox.nvim', -- Theme
-    priority = 1000,
-    config = function()
-      require('gruvbox').setup {
-      }
-      require('gruvbox').load()
-    end,
-  },
-  {
     'nvim-lualine/lualine.nvim', -- Status line
     opts = {
       options = {
@@ -74,7 +65,7 @@ require('lazy').setup {
       },
     },
   },
-  { 'folke/neoconf.nvim',         cmd = 'Neoconf' },
+  { 'folke/neoconf.nvim',          cmd = 'Neoconf' },
   {
     'alexghergh/nvim-tmux-navigation', -- Navigation with tmux
     lazy = false,
@@ -90,6 +81,7 @@ require('lazy').setup {
       }
     end,
   },
+  { 'norcalli/nvim-colorizer.lua', lazy = false }, -- Hex to color
   { import = 'plugins.nvim-tree' },
   { import = 'plugins.telescope' },
   { import = 'plugins.treesitter' },
@@ -147,3 +139,5 @@ vim.keymap.set('n', '<C-n>', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle file 
 
 -- [[ LSP ]]
 require 'plugins.lsp'
+
+require 'theme.theme'

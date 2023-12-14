@@ -19,6 +19,7 @@ return {
       'java',
       'javascript',
       'json5',
+      'perl',
       'python',
       'regex',
       'ruby',

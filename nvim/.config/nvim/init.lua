@@ -137,6 +137,16 @@ vim.keymap.set('n', '<C-S-Right>', '<cmd> vertical resize +2 <CR>', { desc = 'Re
 -- Nvim Tree
 vim.keymap.set('n', '<C-n>', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle file tree', silent = true })
 
+-- Some weird files that need special at
+-- Autocommands
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "Config",
+  callback = function()
+    local buf = vim.api.nvim_get_current_buf()
+    vim.api.nvim_buf_set_option(buf, "filetype", "perl")
+  end,
+})
+
 -- [[ LSP ]]
 require 'plugins.lsp'
 

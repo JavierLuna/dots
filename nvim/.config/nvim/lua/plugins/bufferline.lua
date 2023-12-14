@@ -1,5 +1,5 @@
 vim.keymap.set('n', '<Tab>', '<cmd> BufferLineCycleNext <CR>', { silent = true, desc = 'Next tab' })
-vim.keymap.set('n', '<S-Tab>', '<cmd> BufferLineCycleNext <CR>', { silent = true, desc = 'Next tab' })
+vim.keymap.set('n', '<S-Tab>', '<cmd> BufferLineCyclePrev <CR>', { silent = true, desc = 'Previous tab' })
 
 return {
   'akinsho/bufferline.nvim',

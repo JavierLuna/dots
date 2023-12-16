@@ -1,4 +1,4 @@
-local colors = require("theme.colors")
+local colors = require 'theme.colors'
 
 return {
   MatchWord = {
@@ -11,7 +11,7 @@ return {
   PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
   PmenuThumb = { bg = colors.grey },
 
-  MatchParen = { link = "MatchWord" },
+  MatchParen = { link = 'MatchWord' },
 
   Comment = { fg = colors.grey_fg },
 
@@ -19,7 +19,7 @@ return {
   LineNr = { fg = colors.grey },
 
   -- floating windows
-  FloatBorder = { fg = colors.blue },
+  FloatBorder = { fg = colors.grey },
   NormalFloat = { bg = colors.darker_black },
 
   NvimInternalError = { fg = colors.red },
@@ -109,7 +109,7 @@ return {
   Substitute = {
     fg = colors.base01,
     bg = colors.base0A,
-    sp = "none",
+    sp = 'none',
   },
 
   SpecialKey = {
@@ -143,11 +143,11 @@ return {
 
   Title = {
     fg = colors.base0D,
-    sp = "none",
+    sp = 'none',
   },
 
   Conceal = {
-    bg = "NONE",
+    bg = 'NONE',
   },
 
   Cursor = {
@@ -161,27 +161,27 @@ return {
 
   SignColumn = {
     fg = colors.base03,
-    sp = "NONE",
+    sp = 'NONE',
   },
 
   ColorColumn = {
     bg = colors.base01,
-    sp = "none",
+    sp = 'none',
   },
 
   CursorColumn = {
     bg = colors.base01,
-    sp = "none",
+    sp = 'none',
   },
 
   CursorLine = {
-    bg = "none",
-    sp = "none",
+    bg = 'none',
+    sp = 'none',
   },
 
   QuickFixLine = {
     bg = colors.base01,
-    sp = "none",
+    sp = 'none',
   },
 
   -- spell

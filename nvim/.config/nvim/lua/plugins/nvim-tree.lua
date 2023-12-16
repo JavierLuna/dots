@@ -14,7 +14,8 @@ return {
     },
     filters = {
       dotfiles = true,
-      custom = { 'node_modules' },
+      git_ignored = false,
+      custom = { 'node_modules', 'build' },
     },
     update_focused_file = {
       enable = true,

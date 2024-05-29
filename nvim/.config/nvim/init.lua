@@ -17,14 +17,14 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('lazy').setup {
-  'tpope/vim-fugitive', -- Git
-  'tpope/vim-sleuth', -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+  'tpope/vim-fugitive',                    -- Git
+  'tpope/vim-sleuth',                      -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
   {
-    'neovim/nvim-lspconfig', -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',               -- LSP Configuration & Plugins
     dependencies = {
-      'williamboman/mason.nvim', -- Installs LSP servers
+      'williamboman/mason.nvim',           -- Installs LSP servers
       'williamboman/mason-lspconfig.nvim', -- Installs LSP server configurations
-      'folke/neodev.nvim', -- Additional dev setup for LSPs
+      'folke/neodev.nvim',                 -- Additional dev setup for LSPs
     },
   },
   {
@@ -53,7 +53,7 @@ require('lazy').setup {
       },
     },
   },
-  { 'folke/neoconf.nvim', cmd = 'Neoconf' },
+  { 'folke/neoconf.nvim',          cmd = 'Neoconf' },
   {
     'alexghergh/nvim-tmux-navigation', -- Navigation with tmux
     lazy = false,
@@ -69,17 +69,17 @@ require('lazy').setup {
       }
     end,
   },
-  -- {
-  --   'ribru17/bamboo.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('bamboo').setup {
-  --       -- optional configuration here
-  --     }
-  --     require('bamboo').load()
-  --   end,
-  -- },
+  {
+    "tiagovla/tokyodark.nvim",
+    opts = {
+      -- custom options here
+    },
+    config = function(_, opts)
+      require("tokyodark").setup(opts) -- calling setup is optional
+      vim.cmd [[colorscheme tokyodark]]
+    end,
+  },
+  'famiu/bufdelete.nvim',
   { 'norcalli/nvim-colorizer.lua', lazy = false }, -- Hex to color
   { import = 'plugins.nvim-tree' },
   { import = 'plugins.telescope' },
@@ -89,17 +89,23 @@ require('lazy').setup {
   { import = 'plugins.bufferline' },
   { import = 'plugins.comment' },
   { import = 'plugins.lualine' },
+  {
+    "FabijanZulj/blame.nvim",
+    config = function()
+      require("blame").setup()
+    end
+  },
 }
 
 -- [[ SETTINGS ]]
 
-vim.o.hlsearch = true -- Set highlight on search
-vim.wo.number = true -- Make line numbers default
-vim.o.mouse = 'a' -- Enable mouse mode
-vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim.
-vim.o.breakindent = true -- Enable break indent
-vim.o.undofile = true -- Save undo history
-vim.wo.signcolumn = 'yes' -- Keep signcolumn on by default
+vim.o.hlsearch = true                  -- Set highlight on search
+vim.wo.number = true                   -- Make line numbers default
+vim.o.mouse = 'a'                      -- Enable mouse mode
+vim.o.clipboard = 'unnamedplus'        -- Sync clipboard between OS and Neovim.
+vim.o.breakindent = true               -- Enable break indent
+vim.o.undofile = true                  -- Save undo history
+vim.wo.signcolumn = 'yes'              -- Keep signcolumn on by default
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 vim.o.termguicolors = true
 vim.cmd 'hi NonText guifg=bg'
@@ -118,6 +124,9 @@ vim.opt.splitbelow = true
 
 -- [[ KEYMAPS ]]
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n' }, '<leader>x', function()
+  require('bufdelete').bufdelete()
+end, { silent = true, desc = 'Close current buffer' })
 
 vim.keymap.set({ 'v' }, '>', '>gv', { silent = true, desc = 'Indent line' })
 vim.keymap.set({ 'v' }, '<', '<gv', { silent = true, desc = 'De-indent line' })
@@ -150,4 +159,4 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
 -- [[ LSP ]]
 require 'plugins.lsp'
 
-require 'theme.theme'
+-- require 'theme.theme'

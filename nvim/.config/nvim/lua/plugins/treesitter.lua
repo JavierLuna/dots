@@ -91,6 +91,9 @@ return {
         },
       },
     },
+    matchup = {
+      enable = true,
+    },
   },
   config = function(_, opts)
     --   vim.defer_fn(function()

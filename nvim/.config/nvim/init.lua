@@ -95,6 +95,27 @@ require('lazy').setup {
       require("blame").setup()
     end
   },
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({})
+    end
+  },
+  { "windwp/nvim-autopairs" }, -- autopairs
+  {
+    'andymass/vim-matchup',
+    config = function()
+      vim.api.nvim_set_hl(0, "OffScreenPopup",
+        { fg = "#fe8019", bg = "#3c3836", italic = true })
+      vim.g.matchup_matchparen_offscreen = {
+        method = "popup",
+        highlight = "OffScreenPopup"
+      }
+    end
+  },
+  { "wellle/targets.vim" }, -- adds more targets like [ or ,
 }
 
 -- [[ SETTINGS ]]

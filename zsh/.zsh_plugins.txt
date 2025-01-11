@@ -1,0 +1,14 @@
+
+zsh-users/zsh-completions kind:fpath path:src
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/dotenv  
+ohmyzsh/ohmyzsh path:plugins/extract
+
+
+# Pure theme
+mafredri/zsh-async
+sindresorhus/pure

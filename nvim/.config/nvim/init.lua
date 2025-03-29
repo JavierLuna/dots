@@ -17,14 +17,14 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('lazy').setup {
-  'tpope/vim-fugitive',                    -- Git
-  'tpope/vim-sleuth',                      -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+  'tpope/vim-fugitive', -- Git
+  'tpope/vim-sleuth', -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
   {
-    'neovim/nvim-lspconfig',               -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig', -- LSP Configuration & Plugins
     dependencies = {
-      'williamboman/mason.nvim',           -- Installs LSP servers
+      'williamboman/mason.nvim', -- Installs LSP servers
       'williamboman/mason-lspconfig.nvim', -- Installs LSP server configurations
-      'folke/neodev.nvim',                 -- Additional dev setup for LSPs
+      'folke/neodev.nvim', -- Additional dev setup for LSPs
     },
   },
   {
@@ -53,7 +53,7 @@ require('lazy').setup {
       },
     },
   },
-  { 'folke/neoconf.nvim',          cmd = 'Neoconf' },
+  { 'folke/neoconf.nvim', cmd = 'Neoconf' },
   {
     'alexghergh/nvim-tmux-navigation', -- Navigation with tmux
     lazy = false,
@@ -70,12 +70,12 @@ require('lazy').setup {
     end,
   },
   {
-    "tiagovla/tokyodark.nvim",
+    'tiagovla/tokyodark.nvim',
     opts = {
       -- custom options here
     },
     config = function(_, opts)
-      require("tokyodark").setup(opts) -- calling setup is optional
+      require('tokyodark').setup(opts) -- calling setup is optional
       vim.cmd [[colorscheme tokyodark]]
     end,
   },
@@ -90,45 +90,48 @@ require('lazy').setup {
   { import = 'plugins.comment' },
   { import = 'plugins.lualine' },
   {
-    "FabijanZulj/blame.nvim",
+    'FabijanZulj/blame.nvim',
     config = function()
-      require("blame").setup()
-    end
+      require('blame').setup()
+    end,
   },
   {
-    "kylechui/nvim-surround",
-    version = "*",
-    event = "VeryLazy",
+    'kylechui/nvim-surround',
+    version = '*',
+    event = 'VeryLazy',
     config = function()
-      require("nvim-surround").setup({})
-    end
+      require('nvim-surround').setup {}
+    end,
   },
-  { "windwp/nvim-autopairs" }, -- autopairs
+  { 'windwp/nvim-autopairs' }, -- autopairs
   {
     'andymass/vim-matchup',
     config = function()
-      vim.api.nvim_set_hl(0, "OffScreenPopup",
-        { fg = "#fe8019", bg = "#3c3836", italic = true })
+      vim.api.nvim_set_hl(0, 'OffScreenPopup', { fg = '#fe8019', bg = '#3c3836', italic = true })
       vim.g.matchup_matchparen_offscreen = {
-        method = "popup",
-        highlight = "OffScreenPopup"
+        method = 'popup',
+        highlight = 'OffScreenPopup',
       }
-    end
+    end,
   },
-  { "wellle/targets.vim" }, -- adds more targets like [ or ,
+  { 'wellle/targets.vim' }, -- adds more targets like [ or ,
 }
 
 -- [[ SETTINGS ]]
 
-vim.o.hlsearch = true                  -- Set highlight on search
-vim.wo.number = true                   -- Make line numbers default
-vim.o.mouse = 'a'                      -- Enable mouse mode
-vim.o.clipboard = 'unnamedplus'        -- Sync clipboard between OS and Neovim.
-vim.o.breakindent = true               -- Enable break indent
-vim.o.undofile = true                  -- Save undo history
-vim.wo.signcolumn = 'yes'              -- Keep signcolumn on by default
+vim.o.hlsearch = true -- Set highlight on search
+vim.wo.number = true -- Make line numbers default
+vim.o.mouse = 'a' -- Enable mouse mode
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim. Scheduled as it can increase startup time
+end)
+vim.o.breakindent = true -- Enable break indent
+vim.o.undofile = true -- Save undo history
+vim.wo.signcolumn = 'yes' -- Keep signcolumn on by default
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 vim.o.termguicolors = true
+vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
+
 vim.cmd 'hi NonText guifg=bg'
 vim.cmd 'hi SignColumn guibg=bg'
 

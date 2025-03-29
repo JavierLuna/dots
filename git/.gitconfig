@@ -15,7 +15,13 @@
 
 [core]
 	editor = nvim
-	pager = less -F -X
+	pager = delta
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = zdiff3

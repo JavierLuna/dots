@@ -8,9 +8,9 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'ruff_fix', 'ruff_format' },
-      javascript = { { 'eslint_d', 'eslint' }, { 'prettierd', 'prettier' } },
-      typescript = { { 'eslint_d', 'eslint' }, { 'prettierd', 'prettier' } },
-      markdown = { { 'prettierd', 'prettier' } },
+      javascript = { 'eslint_d', 'prettierd' },
+      typescript = { 'eslint_d', 'prettierd' },
+      markdown = { 'prettierd' },
       rust = { 'rustfmt' },
     },
     format_on_save = function(bufnr)

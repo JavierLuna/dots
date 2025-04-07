@@ -17,28 +17,28 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('lazy').setup {
-  'tpope/vim-fugitive', -- Git
-  'tpope/vim-sleuth', -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+  'tpope/vim-fugitive',                    -- Git
+  'tpope/vim-sleuth',                      -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
   {
-    'neovim/nvim-lspconfig', -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',               -- LSP Configuration & Plugins
     dependencies = {
-      'williamboman/mason.nvim', -- Installs LSP servers
+      'williamboman/mason.nvim',           -- Installs LSP servers
+      'saghen/blink.cmp',
       'williamboman/mason-lspconfig.nvim', -- Installs LSP server configurations
-      'folke/neodev.nvim', -- Additional dev setup for LSPs
+      'folke/neodev.nvim',                 -- Additional dev setup for LSPs
     },
   },
   {
-    'vigoux/notifier.nvim',
+    'rcarriga/nvim-notify',
     opts = {
-      components = {
-        'nvim',
-        'lsp',
-      },
-      notify = {
-        clear_time = 3000,
-        min_level = vim.log.levels.INFO,
-      },
+      level = vim.log.levels.INFO,
+      stages = 'fade'
     },
+    config = function(_, opts)
+      local notify = require("notify")
+      notify.setup(opts)
+      vim.notify = notify
+    end
   },
   {
     'lewis6991/gitsigns.nvim', -- Adds git signs to the side (gutter)
@@ -53,7 +53,7 @@ require('lazy').setup {
       },
     },
   },
-  { 'folke/neoconf.nvim', cmd = 'Neoconf' },
+  { 'folke/neoconf.nvim',          cmd = 'Neoconf' },
   {
     'alexghergh/nvim-tmux-navigation', -- Navigation with tmux
     lazy = false,
@@ -81,10 +81,11 @@ require('lazy').setup {
   },
   'famiu/bufdelete.nvim',
   { 'norcalli/nvim-colorizer.lua', lazy = false }, -- Hex to color
+  { import = 'plugins.blink' },
   { import = 'plugins.nvim-tree' },
   { import = 'plugins.telescope' },
   { import = 'plugins.treesitter' },
-  { import = 'plugins.nvim-cmp' },
+  -- { import = 'plugins.nvim-cmp' },
   { import = 'plugins.conform' },
   { import = 'plugins.bufferline' },
   { import = 'plugins.comment' },
@@ -103,7 +104,9 @@ require('lazy').setup {
       require('nvim-surround').setup {}
     end,
   },
-  { 'windwp/nvim-autopairs' }, -- autopairs
+  { "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true }, -- autopairs
   {
     'andymass/vim-matchup',
     config = function()
@@ -119,21 +122,22 @@ require('lazy').setup {
 
 -- [[ SETTINGS ]]
 
-vim.o.hlsearch = true -- Set highlight on search
-vim.wo.number = true -- Make line numbers default
-vim.o.mouse = 'a' -- Enable mouse mode
+vim.o.hlsearch = true                  -- Set highlight on search
+vim.wo.number = true                   -- Make line numbers default
+vim.o.mouse = 'a'                      -- Enable mouse mode
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim. Scheduled as it can increase startup time
+  vim.opt.clipboard = 'unnamedplus'    -- Sync clipboard between OS and Neovim. Scheduled as it can increase startup time
 end)
-vim.o.breakindent = true -- Enable break indent
-vim.o.undofile = true -- Save undo history
-vim.wo.signcolumn = 'yes' -- Keep signcolumn on by default
+vim.o.breakindent = true               -- Enable break indent
+vim.o.undofile = true                  -- Save undo history
+vim.wo.signcolumn = 'yes'              -- Keep signcolumn on by default
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 vim.o.termguicolors = true
-vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 10                 -- Minimal number of screen lines to keep above and below the cursor.
 
 vim.cmd 'hi NonText guifg=bg'
 vim.cmd 'hi SignColumn guibg=bg'
+vim.o.winborder = 'none'
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true

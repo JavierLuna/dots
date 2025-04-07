@@ -3,5 +3,5 @@ compinit
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh) # kubectl
 
-test -f $HOME/.fzf.zsh && source ~/.fzf.zsh
+(( $+commands[fzf] )) && source <(fzf --zsh)
 test -f $HOME/.cargo/env && source $HOME/.cargo/env # Rust

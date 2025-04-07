@@ -47,7 +47,7 @@ local servers = {
   clangd = {},
   pyright = {},
   rust_analyzer = {},
-  tsserver = {},
+  ts_ls = {},
   html = { filetypes = { 'html' } },
   smithy_ls = {},
   dockerls = {},
@@ -59,8 +59,7 @@ local servers = {
 require('neodev').setup()
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
@@ -103,35 +102,39 @@ vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {
 
 vim.lsp.protocol.CompletionItemKind = {
   "   (Text) ",
-  "   (Method)",
-  "   (Function)",
+  "   (Method)",
+  " 󰡱  (Function)",
   "   (Constructor)",
-  " ﴲ  (Field)",
-  "[] (Variable)",
-  "   (Class)",
-  " ﰮ  (Interface)",
-  "   (Module)",
-  " 襁 (Property)",
+  "  (Field)",
+  "  (Variable)",
+  "   (Class)",
+  "   (Interface)",
+  " 󱒌  (Module)",
+  "  (Property)",
   "   (Unit)",
   "   (Value)",
-  " 練 (Enum)",
-  "   (Keyword)",
+  "  (Enum)",
+  "   (Keyword)",
   "   (Snippet)",
-  "   (Color)",
-  "   (File)",
-  "   (Reference)",
-  "   (Folder)",
-  "   (EnumMember)",
-  " ﲀ  (Constant)",
-  " ﳤ  (Struct)",
-  "   (Event)",
-  "   (Operator)",
-  "   (TypeParameter)",
+  "   (Color)",
+  "   (File)",
+  "   (Reference)",
+  "   (Folder)",
+  "   (EnumMember)",
+  "   (Constant)",
+  "   (Struct)",
+  "   (Event)",
+  "   (Operator)",
+  "   (TypeParameter)",
 }
 
-
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '',
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.HINT] = '',
+      [vim.diagnostic.severity.INFO] = ''
+    }
+  }
+})

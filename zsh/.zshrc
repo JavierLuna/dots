@@ -16,11 +16,7 @@ test -f $HOME/.zshrc_custom && source $HOME/.zshrc_custom
 # Activate vim bindings
 bindkey -v
 
-if [ -z "$TMUX" ]
-then
-    tmux attach -t TMUX || tmux new -s TMUX
-else
-  macchina
-fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-. "$HOME/.local/bin/env"
+macchina
+

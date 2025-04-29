@@ -117,6 +117,12 @@ require('lazy').setup {
       }
     end,
   },
+  {
+    'mcauley-penney/visual-whitespace.nvim',
+    config = true,
+    event = "ModeChanged *:[vV\22]",
+    opts = {},
+  },
   { 'wellle/targets.vim' }, -- adds more targets like [ or ,
 }
 

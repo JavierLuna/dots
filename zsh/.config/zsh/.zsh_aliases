@@ -9,6 +9,8 @@ alias gs="git status"
 alias gc="git commit"
 alias ga="git add"
 
+alias npmscripts="cat package.json | jq '.scripts'"
+
 # xbps-like aliases
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	# Linux (No differenciation right now, will assume ubuntu)

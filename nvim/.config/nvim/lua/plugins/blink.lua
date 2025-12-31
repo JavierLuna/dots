@@ -17,11 +17,25 @@ return {
       ['<S-Tab>'] = { 'select_prev', 'fallback' },
     },
     sources = {
-      default = { 'lsp', 'path', 'buffer', 'snippets' }
+      default = { 'lazydev', 'lsp', 'path', 'buffer', 'snippets' },
+      providers = {
+        lazydev = {
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
+          score_offset = 100,
+        }
+      }
     },
     fuzzy = { implementation = 'lua' },
     appearance = {
       use_nvim_cmp_as_default = true,
+    },
+    signature = {
+      enabled = true,
+      trigger = {
+        enabled = true,
+        show_on_insert = false,
+      }
     },
     completion = {
       documentation = {

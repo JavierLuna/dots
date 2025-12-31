@@ -17,16 +17,21 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('lazy').setup {
-  'tpope/vim-fugitive',                    -- Git
-  'tpope/vim-sleuth',                      -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+  'tpope/vim-fugitive',                      -- Git
+  'tpope/vim-sleuth',                        -- Adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
   {
-    'neovim/nvim-lspconfig',               -- LSP Configuration & Plugins
+    'mason-org/mason-lspconfig.nvim',        -- Installs LSP server configurations
     dependencies = {
-      'williamboman/mason.nvim',           -- Installs LSP servers
-      'saghen/blink.cmp',
-      'williamboman/mason-lspconfig.nvim', -- Installs LSP server configurations
-      'folke/neodev.nvim',                 -- Additional dev setup for LSPs
+      { "mason-org/mason.nvim", opts = {} }, -- Installs LSP servers
+      'neovim/nvim-lspconfig',
     },
+  },
+  {
+    'saghen/blink.cmp',
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'folke/lazydev.nvim'
+    }
   },
   {
     'rcarriga/nvim-notify',

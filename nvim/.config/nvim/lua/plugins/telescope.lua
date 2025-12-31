@@ -1,12 +1,13 @@
 vim.keymap.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>', { desc = 'Find files', silent = true })
 vim.keymap.set('n', '<leader>fw', '<cmd> Telescope live_grep <CR>', { desc = 'Live grep', silent = true })
 vim.keymap.set('n', '<leader>fb', '<cmd> Telescope buffers <CR>', { desc = 'Find buffers', silent = true })
-vim.keymap.set('n', '<leader>fz', '<cmd> Telescope current_buffer_fuzzy_find <CR>', { desc = 'Find in current buffer', silent = true })
+vim.keymap.set('n', '<leader>fz', '<cmd> Telescope current_buffer_fuzzy_find <CR>',
+  { desc = 'Find in current buffer', silent = true })
 
 return {
   {
     'nvim-telescope/telescope.nvim', -- Fuzzy finder frontend
-    branch = '0.1.x',
+    tag = 'v0.2.0',
     dependencies = {
       'nvim-lua/plenary.nvim',
       {

@@ -16,7 +16,7 @@ test -f $HOME/.zshrc_custom && source $HOME/.zshrc_custom
 # Activate vim bindings
 bindkey -v
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -e /opt/homebrew/bin/brew ]] || eval "$(/opt/homebrew/bin/brew shellenv)"
 
 macchina
 
